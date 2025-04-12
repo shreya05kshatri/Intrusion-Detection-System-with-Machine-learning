@@ -35,10 +35,12 @@ This project is a lightweight Intrusion Detection System (IDS) built using Pytho
 .\.venv\Scripts\activate  # Windows
 ```
 ### 3. Install Library 
-```pip install flask numpy pandas scikit-learn joblib
+```
+pip install flask numpy pandas scikit-learn joblib
 ```
 ### 4. Train the Model
-```from sklearn.ensemble import RandomForestClassifier
+```
+from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # Assume X_train, y_train already preprocessed
@@ -49,9 +51,30 @@ joblib.dump(model, 'models/random_forest_ids_model.pkl')
 joblib.dump(encoders, 'models/label_encoders.pkl')
 ```
 ### 5. Run the App
-```python app.py
+```
+python app.py
 ```
 ### 6. Start packet sniffing
-```python realtime_sniffer.py
 ```
+python realtime_sniffer.py
+```
+
+## Screenshot 
+Detection Module
+![image (1)](https://github.com/user-attachments/assets/e2fa33d4-7476-4c32-b1d7-395cf2af0882)
+
+Live Detecting 
+![image](https://github.com/user-attachments/assets/652a8040-eb98-4ec8-8ac3-251096af98cf)
+
+
+
+
+
+
+
+
+
+
+
+
 
