@@ -26,6 +26,31 @@ This project is a lightweight Intrusion Detection System (IDS) built using Pytho
 - NSL-KDD Dataset
 
 ---
+## ⚙️ Setup Instructions
 
+### 1. Clone the Repository
 
+### 2. Create and Activate Virtual Environment
+python -m venv .venv
+.\.venv\Scripts\activate  # Windows
+
+### 3. Install Library 
+pip install flask numpy pandas scikit-learn joblib
+
+### 4. Train the Model
+from sklearn.ensemble import RandomForestClassifier
+import joblib
+
+# Assume X_train, y_train already preprocessed
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+joblib.dump(model, 'models/random_forest_ids_model.pkl')
+joblib.dump(encoders, 'models/label_encoders.pkl')
+
+### 5. Run the App
+python app.py
+
+### 6. Start packet sniffing
+python realtime_sniffer.py
 
