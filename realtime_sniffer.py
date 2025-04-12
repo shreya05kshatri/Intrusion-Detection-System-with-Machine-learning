@@ -11,8 +11,6 @@ def extract_features(packet):
         features = {
             "duration": 0,
             "protocol_type": "tcp",
-            "service": "http",
-            "flag": "SF",
             "src_bytes": len(packet),
             "dst_bytes": 0,
             "count": 1
@@ -25,13 +23,11 @@ def extract_features(packet):
 
 def packet_callback(packet):
     features = extract_features(packet)
-    if features:
         try:
             response = requests.post(API_URL, json=features)
-            result = response.json()
             print(f"[+] Prediction: {result.get('prediction', 'Unknown')}")
         except Exception as e:
             print("Error sending packet for prediction:", e)
 
 print("[*] Starting packet sniffing...")
-sniff(prn=packet_callback, store=0)
+sniff(prn=packet_callback, store=2)
