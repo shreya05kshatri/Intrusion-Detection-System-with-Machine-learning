@@ -31,11 +31,11 @@ This project is a lightweight Intrusion Detection System (IDS) built using Pytho
 ### 1. Clone the Repository
 
 ### 2. Create and Activate Virtual Environment
-python -m venv .venv
+``` python -m venv .venv
 .\.venv\Scripts\activate  # Windows
 
 ### 3. Install Library 
-pip install flask numpy pandas scikit-learn joblib
+```pip install flask numpy pandas scikit-learn joblib
 
 ### 4. Train the Model
 from sklearn.ensemble import RandomForestClassifier
