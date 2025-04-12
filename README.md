@@ -7,6 +7,16 @@ This project is a lightweight Intrusion Detection System (IDS) built using Pytho
 
 ---
 
+## Core Libraries Used 
+- flask
+- scikit-learn
+- joblib
+- numpy
+- pandas
+- scapy
+
+---
+
 ## 🚀 Features
 
 - Detects normal and malicious network activity using ML
@@ -65,6 +75,10 @@ Detection Module
 
 Live Detecting 
 ![image](https://github.com/user-attachments/assets/652a8040-eb98-4ec8-8ac3-251096af98cf)
+
+## For full code:
+### Contact:
+E-mail: kshatrishreya.work@gmail.com
 
 
 
